@@ -81,7 +81,7 @@ const handleSubmit = async (e) => {
 
   //fetch data from server get bot response
 
-  const response = await fetch("https://alfred-g461.onrender.com/", {
+  const response = await fetch("http://localhost:5000", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -97,9 +97,6 @@ const handleSubmit = async (e) => {
   if (response.ok) {
     const data = await response.json();
     const parsedData = data.bot.trim();
-
-    //test parsed data
-    console.log({ parsedData });
 
     typeText(messageDiv, parsedData);
   } else {
