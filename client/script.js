@@ -81,7 +81,7 @@ const handleSubmit = async (e) => {
 
   //fetch data from server get bot response
 
-  const response = await fetch("https://alfred-your-butler-ai.onrender.com", {
+  const response = await fetch("http://localhost:5000", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
